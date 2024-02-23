@@ -1,0 +1,28 @@
+Joey Taylor
+2/23/2024
+CS260
+Assignment2
+
+Based on what we know about linked lists, stacks, and queues, design a queue data structure:
+
+   1. What functions are we likely to need for a queue to function like the one discussed in class?
+dequeue (head/front), enqueue (tail/back), maybe additional elements like for what is at the front of the queue, size of the queue, and a check for if the queue is empty
+
+    2. What values will we need to know about the structure for our queue to function properly?
+
+front pointer for first element of the queue, rear pointer for the last element of the queue, size to keep track of the queue length
+
+Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list (instead of the top of a stack or the front or back of a queue):
+
+   3. What functions are we likely to need for a list to function like this?
+An insertion function (Point previous node to new node. Point new node to where previous node used to point), a deletion function (point previous node to next node), a search function
+
+   4. What values will we need to know about the structure for our list to function properly?
+Pointers to the first and last nodes in the list. Size to keep track of the amount of nodes in the list
+
+
+
+
+Drew the insertion / deletion to help make it make more sense to me:
+https://cdn.discordapp.com/attachments/1174406367524696147/1210679269865291846/rn_image_picker_lib_temp_88feca49-4e65-4511-81b2-6b627132775f.jpg?ex=65eb6fef&is=65d8faef&hm=2eac9e9d7e917a5d8d9e7793167c9284739f6047f68fe3672e11dddacec0509a&
+https://media.discordapp.net/attachments/1174406367524696147/1210680037330784346/rn_image_picker_lib_temp_37ec2151-004f-4ea7-8f92-c0f81320fe1c.jpg?ex=65eb70a6&is=65d8fba6&hm=b3d928a5b2890efd37dbab1cf30f8437d9c7193807f45098ba74a2e5d9dd839d&=&format=webp&width=497&height=663
