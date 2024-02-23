@@ -1,0 +1,28 @@
+Joey Taylor
+2/22/2024
+CS 260
+
+
+1.    some way of representing marbles (what makes up a marble in this program?),
+    Marbles can simply be an integer called Marbles
+
+2.    a way to add new marbles into the bag (how do we interact with marbles and add them into the bag?),
+    Prompt the user if they want to add a marbel to the bag (If yes, add a marbel)
+
+3.    a way to remove a marble out of the bag (perhaps a random marble taken out of the bag?),
+    In the same prompt, ask if they want to remove a marbel (If no, remove a marbel with a minimum of 0)
+
+4.    a few ways that we could use to show that our implementation should be working correctly (tests),
+    Main test would be to check if removing a marbel from an empty bag would still remain 0. I do not care if I can add to infinity. Also if removing from a bag with 2 marbel bag would return to 1, and then to 0 when repeated.
+
+4.    attempt to implement
+    Implemented in assignment1.cpp
+
+5. tested in terminal
+    link to image of tests:
+    https://cdn.discordapp.com/attachments/1174406367524696147/1210436950541078568/image.png?ex=65ea8e41&is=65d81941&hm=2fd2cb50cb5a3621e314d14e7da18e2d2ca1df3770f0edd298bb3a276b63c1dd&
+
+6. Which lines fulfill requirements?
+Line 5 represents the marbels via an integer. When the program exits, it accurately shows how many marbels should be in the bag
+Adding marbel response (lines 14-16), adds one marbel to the integer of marbels, and correctly integrates over time per the test.
+Removing marbel response (lines 17-23), removes one marbel from the integer of marbels, but an if statement catches for if there is no available marbels to remove. Correctly integrates over time per the test.
