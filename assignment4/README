@@ -1,1 +1,11 @@
+Joey Taylor
+3/2/2024
+CS 260
+Assignment 4
 
+Lines 9-35 of linkedlist.cpp is the funtion that adds values to a given position in a linked list
+Lines 38-65 of linkedlist.cpp is the function that removes values from a given position in a linked list
+Lines 67-81 of linkedlist.cpp is the function that returns a value from the linked list without removing it
+
+This image shows the tests from testlinkedlist.cpp working as expected
+https://media.discordapp.net/attachments/789557468652896316/1213617568305258538/image.png?ex=65f62070&is=65e3ab70&hm=58f787dd3b16db4521382cc346a53f0b6a68192aa9a0645fbb7be097e8d04898&=&format=webp&quality=lossless
