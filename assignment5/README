@@ -1,0 +1,24 @@
+Joey Taylor
+3/2/2024
+CS 260
+Assignment 5
+
+1.    Follow along with the in-class exercise on this, do your best to get it working, and turn in what you come up with here!
+
+I am interpreting this as making sure I have your files, which I do.
+
+2.    Be sure to include at least one test for each function or piece of functionality that should verify that your code is working!  No slacking smile, you should start writing some tests before you write your implementations (just spend a few minutes thinking about the design and then write a few tests using natural language (English is preferred for me to be able to read it smile ))
+
+I am interpreting this as you wanting us to make an additional test to the functions you put in place, which I placed after line 106 in the testing file provided (test_autosort_list.cpp).
+
+3.    Create an array-based list or a linked-list (and a bonus for attempting both) that:
+        Added in question3_list.cpp
+       3a. automatically inserts values in the correct position based on some order of sorting (perhaps ascending integers or lexicographical sorting of words)
+        lines 10-28 of question3_list.cpp
+
+       3b. efficiently searches for elements (likely binary search for the array list, but what about the linked-list?)
+        lines 30-42 of question3_list.cpp
+                                              
+   4. Make a chart to compare the algorithmic complexity (use Big-O notation) of your insert, remove, and search algorithms you used for your structures
+                                              Making a chart for this seems excessive. For each function, the lowest possible outcome for each is O(1) for when the functions deal with adding or removing the head, and O(n) in the worst case scenario otherwise.
+                                              
