@@ -1,0 +1,57 @@
+Joey Taylor
+3/4/2024
+CS 260
+Assignment 7
+
+1. Create a design before you begin to code that describes or shows how we can store data in a hash table and what kind of problem we could solve with a hash table.
+    Hash Function: Sums ASCII values of characters in the string and modulates by capacity to find the bucket index.
+    Array-Based Storage: An array of strings will serve as buckets with an initial capacity defined at construction.
+    Collision Handling: If a collision occurs, the new value overwrites the existing one in the bucket. A collision count is maintained for tracking.
+
+2. Create some tests (at least one per piece of functionality) before you begin coding that you want your hashtable to pass before you start coding.
+  DumbHashTable Tests
+
+    Add Elements Test: We add "test" and "data" to the hash table and check that it grows to 2 items, making sure both can be found.
+    Overwrite Element Test: By adding "test" again, we see if the table keeps its size at 2, showing it doesn't duplicate entries.
+    Remove Element Test: Removing "test" should make it unsearchable and decrease the table's size to 1.
+
+  SmartHashTable Tests
+
+    Add Elements Test: Adding "test", "data", "a", and "k" checks the table grows to 4 items and tests how it deals with "a" and "k" causing a collision.
+    Collision Handling Test: We ensure the table records one collision when "a" and "k" are added since they end up in the same spot.
+    Remove Element Test: Deleting "test" checks if the table size correctly drops to 3 and "test" can't be found anymore.
+    Nonexistent Element Removal Test: Trying to remove "nonexistent" confirms the table doesn't change or pretend the removal worked.
+    Smart Hash Table Integrity Test: After all actions, make sure the table still has the correct item count, knows about collisions, and can find all added items.
+
+3. Create a hashtable that resolves collisions by simply overwriting the old value with the new value, including at least:
+Dumb hashtable made in dumbhash.cpp
+
+    3a. Describe the way that you decide on hashing a value
+    (this can be simple or complex based on how interesting you find the topic)
+      The hash function first initializes a sum to 0 and adds up the ASCII values of all characters in a key. 
+      It then calculates a storage index by taking the sum modulo the hash table's capacity, ensuring the index fits within the table's size. 
+      Finally, this index is used to store, find, or remove keys in the hash table, making operations like adding and searching possible.
+
+    3b. An insert function that places the value at the appropriate location based on its hash value
+      Insert function in lines 21-30 in dumbhash.cpp
+
+    3c. A contains function that returns whether the value is already in the hashtable
+      Search function in lines 42-45 in dumbhash.cpp
+
+    3d. (optional) A delete function that removes a value based on its hash and then returns that value…
+      remove function in lines 32-40 in dumbhash.cpp
+
+4. Then create a smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable
+  Smart hashtable made in smarthash.cpp using chaining, includes all of the same functions.
+
+5. Compare some information relating to collisions (frequency) and their effect on complexity (of insert and contains methods)
+  Assuming you mean relating between the smart hashtable and the dumb hashtable, not just in general:
+  In the DumbHashTable, when two keys end up at the same spot, one overwrites the other, which is quick but can cause data loss. 
+  This makes inserting and finding items pretty fast, usually taking the same amount of time no matter how many items are in the table. 
+  The SmartHashTable, however, lets multiple keys live at the same spot by storing them in a list, preventing data loss but making insert and search operations potentially slower if many items clash at the same index. 
+  So, while SmartHashTable is better at keeping all the data safe, it might take longer to do things when it gets crowded.
+
+
+6. Once you have implemented and tested your code, add to the README file what line(s) of code or inputs and outputs show your work meeting each of the above requirements
+test.cpp includes all the tests made for the code. Here is the output, line requirements specified in the above questions:
+  image: https://media.discordapp.net/attachments/1174406367524696147/1214434313492504636/image.png?ex=65f91917&is=65e6a417&hm=19ba6b23dfbc9f23a9e5225c9e90b6dc366c649b16af4c8e1a99991acf0f2f2b&=&format=webp&quality=lossless
