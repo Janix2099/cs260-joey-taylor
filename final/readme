@@ -1,0 +1,29 @@
+Joey Taylor
+3/16/2024
+CS 260
+Final Assignment
+
+1. Design
+A graph structure can be used to represent and optimize the flow of data across a network. 
+Nodes in the graph represent routers or switches, and edges represent the physical or logical connections between these devices. 
+This graph-based approach enables efficient routing of data packets by finding the shortest or least congested paths, improving network performance and reducing latency.
+
+2. Plan Test
+For tests, I am simply going to make two graphs, and if both follow my expectations for weight and cost then I will consider all of the functions to be sufficiently tested twice.
+I will make sure the graphs are of different lengths to make sure everything is in order on that front.
+
+3. Implementation Locations
+Function to add nodes: graph.cpp (9-15)
+Function to add edges: graph.cpp (18-26)
+Function for shortest path: graph.cpp (57-104)
+Function for minimum spanning tree: graph.cpp (30-54)
+
+4. Complexity:
+O(logV) = AddNode
+O(logV)+O(1)+O(1) = AddEdge
+O(ElogE) = MST (If I followed the guide correctly at least, I am not the most sure on what ElogE means)
+O((V+E)logV) =  shortestpath (Even less certain about this one, but if I implemented the methods correctly that is what it should be at)
+Ultimately fairly complex, but minimizes where it can.
+
+Tests done in test.cpp
+Success: https://media.discordapp.net/attachments/692762839630479381/1218542807543713832/image.png?ex=66080b6c&is=65f5966c&hm=05cd945bdf86fac248bd8484c8bdd3d300cfbe2b3d5fd50df3928b7b2a87414e&=&format=webp&quality=lossless
