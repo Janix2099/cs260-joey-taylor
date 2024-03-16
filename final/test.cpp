@@ -16,7 +16,6 @@ int main() {
     std::cout << "\nShortest Path from A to C:" << std::endl;
     g.shortestPath('A', 'C'); // Expected output: A B C (Cost: 3)
 
-    // Clear the graph and check if it's empty or perform memory check here
     g.clearGraph();
 
     // New Graph
